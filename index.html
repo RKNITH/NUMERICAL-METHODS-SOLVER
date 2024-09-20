@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numerical Methods Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.0/math.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Numerical Methods Simulator</h1>
+    </header>
+
+    <main>
+        <section class="method-section">
+            <h2>Select Method:</h2>
+            <div class="method-buttons">
+                <button id="newtonRaphsonBtn">Newton-Raphson</button>
+                <button id="eulerBtn">Euler's Method</button>
+                <button id="rungeKuttaBtn">Runge-Kutta</button>
+            </div>
+        </section>
+
+        <section id="inputSection">
+            <h2>Enter Equation or Function:</h2>
+            <label for="equation">Equation (f(x) or dy/dx):</label>
+            <input type="text" id="equation" placeholder="Example: x^3 - 5x + 1">
+            <label for="initialValue">Initial Value:</label>
+            <input type="text" id="initialValue" placeholder="Initial value (e.g. x0)">
+            <label for="stepSize">Step Size:</label>
+            <input type="number" id="stepSize" placeholder="Step size (for Euler or Runge-Kutta)">
+            <button id="solveBtn">Solve</button>
+        </section>
+
+        <section id="resultSection">
+            <h2>Result:</h2>
+            <div id="output"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Numerical Methods Simulator</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
